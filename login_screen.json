@@ -1,0 +1,1047 @@
+{
+  "type": "container",
+  "args": {
+    "height": "infinity",
+    "width": "infinity",
+    "decoration": {
+      "gradient": {
+        "type": "linear",
+        "begin": "bottomRight",
+        "end": "topRight",
+        "colors": [
+          "#FFF06292",
+          "#f5cba7"
+        ]
+      }
+    },
+    "child": {
+      "type": "stack",
+      "args": {
+        "alignment": "topCenter",
+        "children": [
+          {
+            "type": "column",
+            "args": {
+              "children": [
+                {
+                  "type": "padding",
+                  "args": {
+                    "padding": [
+                      0,
+                      100,
+                      0,
+                      0
+                    ],
+                    "child": {
+                      "type": "asset_image",
+                      "args": {
+                        "fit": "fitWidth",
+                        "name": "assets/images/logo.png",
+                        "width": "240"
+                      }
+                    }
+                  }
+                },
+                {
+                  "type": "sized_box",
+                  "args": {
+                    "height": 100
+                  }
+                },
+                {
+                  "type": "padding",
+                  "args": {
+                    "padding": [
+                      15,
+                      0,
+                      15,
+                      0
+                    ],
+                    "child": {
+                      "type": "container",
+                      "args": {
+                        "padding": [
+                          15,
+                          60,
+                          15,
+                          15
+                        ],
+                        "width": "infinity",
+                        "decoration": {
+                          "border": {
+                            "width": 3,
+                            "color": "#FFFFFF"
+                          }
+                        },
+                        "child": {
+                          "type": "set_default_value",
+                          "args": {
+                            "values": {
+                              "viewType": "register"
+                            },
+                            "child": {
+                              "type": "column",
+                              "args": {
+                                "children": [
+                                  {
+                                    "type": "conditional",
+                                    "args": {
+                                      "conditional": {
+                                        "values": {
+                                          "viewType": "register"
+                                        }
+                                      },
+                                      "onTrue": {
+                                        "type": "form",
+                                        "args": {
+                                          "child": {
+                                            "type": "column",
+                                            "args": {
+                                              "children": [
+                                                {
+                                                  "type": "opacity",
+                                                  "args": {
+                                                    "opacity": 0.6,
+                                                    "child": {
+                                                      "type": "text",
+                                                      "args": {
+                                                        "text": "Hi, Shriram",
+                                                        "style": {
+                                                          "fontSize": 17,
+                                                          "color": "#000000",
+                                                          "fontWeight": "w800"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                },
+                                                {
+                                                  "type": "sized_box",
+                                                  "args": {
+                                                    "height": 20
+                                                  }
+                                                },
+                                                {
+                                                  "type": "row",
+                                                  "args": {
+                                                    "children": [
+                                                      {
+                                                        "type": "expanded",
+                                                        "args": {
+                                                          "child": {
+                                                            "type": "text_form_field",
+                                                            "id": "mobile_number",
+                                                            "args": {
+                                                              "keyboardType": "number",
+                                                              "decoration": {
+                                                                "hintText": "Mobile Number",
+                                                                "labelText": "Mobile Number",
+                                                                "fillColor": "#45b39d",
+                                                                "filled": true,
+                                                                "hintStyle": {
+                                                                  "fontSize": 16,
+                                                                  "fontWeight": "w600",
+                                                                  "letterSpacing": 1.0
+                                                                },
+                                                                "border": {
+                                                                  "type": "outline",
+                                                                  "borderRadius": 3.0
+                                                                }
+                                                              },
+                                                              "validators": [
+                                                                {
+                                                                  "type": "required"
+                                                                },
+                                                                {
+                                                                  "type": "number"
+                                                                },
+                                                                {
+                                                                  "length": 10,
+                                                                  "type": "max_length"
+                                                                },
+                                                                {
+                                                                  "length": 10,
+                                                                  "type": "min_length"
+                                                                }
+                                                              ]
+                                                            }
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "sized_box",
+                                                        "args": {
+                                                          "width": 15
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "ink_well",
+                                                        "args": {
+                                                          "onTap": "${validateUser('validate_context','viewType')}",
+                                                          "child": {
+                                                            "type": "save_context",
+                                                            "args": {
+                                                              "key": "validate_context",
+                                                              "child": {
+                                                                "type": "sized_box",
+                                                                "args": {
+                                                                  "height": "50",
+                                                                  "width": "50",
+                                                                  "child": {
+                                                                    "type": "asset_image",
+                                                                    "args": {
+                                                                      "fit": "fitWidth",
+                                                                      "name": "assets/images/loginarrow.png",
+                                                                      "width": "240"
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                },
+                                                {
+                                                  "type": "sized_box",
+                                                  "args": {
+                                                    "height": 30
+                                                  }
+                                                },
+                                                {
+                                                  "type": "row",
+                                                  "args": {
+                                                    "mainAxisAlignment": "end",
+                                                    "children": [
+                                                      {
+                                                        "type": "text",
+                                                        "args": {
+                                                          "text": "New User?",
+                                                          "style": {
+                                                            "color": "#FFFFFF",
+                                                            "fontSize": 16,
+                                                            "fontWeight": "w700"
+                                                          }
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "sized_box",
+                                                        "args": {
+                                                          "width": 20
+                                                        }
+                                                      },
+                                                      {
+                                                        "type": "ink_well",
+                                                        "args": {
+                                                          "onTap": "${registerUser('register_context','viewType')}",
+                                                          "child": {
+                                                            "type": "save_context",
+                                                            "args": {
+                                                              "key": "register_context",
+                                                              "child": {
+                                                                "type": "container",
+                                                                "args": {
+                                                                  "alignment": "center",
+                                                                  "height": 43,
+                                                                  "width": 100,
+                                                                  "decoration": {
+                                                                    "color": "#FF139DB7",
+                                                                    "borderRadius": 18
+                                                                  },
+                                                                  "child": {
+                                                                    "type": "text",
+                                                                    "args": {
+                                                                      "text": "Register",
+                                                                      "style": {
+                                                                        "color": "#FFFFFF",
+                                                                        "fontSize": 16,
+                                                                        "fontWeight": "bold"
+                                                                      }
+                                                                    }
+                                                                  }
+                                                                }
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    ]
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          }
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "conditional",
+                                    "args": {
+                                      "conditional": {
+                                        "values": {
+                                          "viewType": "registerUser"
+                                        }
+                                      },
+                                      "onTrue": {
+                                        "type": "column",
+                                        "args": {
+                                          "children": [
+                                            {
+                                              "type": "opacity",
+                                              "args": {
+                                                "opacity": 0.6,
+                                                "child": {
+                                                  "type": "text",
+                                                  "args": {
+                                                    "text": "Hi, Shriram",
+                                                    "style": {
+                                                      "fontSize": 17,
+                                                      "color": "#000000",
+                                                      "fontWeight": "w800"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 20
+                                              }
+                                            },
+                                            {
+                                              "type": "text_form_field",
+                                              "id": "mobile_number",
+                                              "args": {
+                                                "keyboardType": "number",
+                                                "decoration": {
+                                                  "hintText": "Mobile Number",
+                                                  "fillColor": "#45b39d",
+                                                  "filled": true,
+                                                  "hintStyle": {
+                                                    "fontSize": 16,
+                                                    "fontWeight": "w600",
+                                                    "letterSpacing": 1.0
+                                                  },
+                                                  "border": {
+                                                    "type": "outline",
+                                                    "borderRadius": 3.0
+                                                  }
+                                                },
+                                                "validators": [
+                                                  {
+                                                    "type": "required"
+                                                  },
+                                                  {
+                                                    "type": "number"
+                                                  },
+                                                  {
+                                                    "length": 10,
+                                                    "type": "max_length"
+                                                  },
+                                                  {
+                                                    "length": 10,
+                                                    "type": "min_length"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 30
+                                              }
+                                            },
+                                            {
+                                              "type": "text_form_field",
+                                              "id": "otp_number",
+                                              "args": {
+                                                "keyboardType": "number",
+                                                "decoration": {
+                                                  "hintText": "OTP",
+                                                  "fillColor": "#45b39d",
+                                                  "filled": true,
+                                                  "hintStyle": {
+                                                    "fontSize": 16,
+                                                    "fontWeight": "w600",
+                                                    "letterSpacing": 1.0
+                                                  },
+                                                  "border": {
+                                                    "type": "outline",
+                                                    "borderRadius": 3.0
+                                                  }
+                                                },
+                                                "validators": [
+                                                  {
+                                                    "type": "required"
+                                                  },
+                                                  {
+                                                    "type": "number"
+                                                  },
+                                                  {
+                                                    "length": 4,
+                                                    "type": "max_length"
+                                                  },
+                                                  {
+                                                    "length": 6,
+                                                    "type": "min_length"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 30
+                                              }
+                                            },
+                                            {
+                                              "type": "text_form_field",
+                                              "id": "user_name",
+                                              "args": {
+                                                "keyboardType": "text",
+                                                "decoration": {
+                                                  "hintText": "Enter Name",
+                                                  "fillColor": "#45b39d",
+                                                  "filled": true,
+                                                  "hintStyle": {
+                                                    "fontSize": 16,
+                                                    "fontWeight": "w600",
+                                                    "letterSpacing": 1.0
+                                                  },
+                                                  "border": {
+                                                    "type": "outline",
+                                                    "borderRadius": 3.0
+                                                  }
+                                                },
+                                                "validators": [
+                                                  {
+                                                    "type": "required"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 30
+                                              }
+                                            },
+                                            {
+                                              "type": "row",
+                                              "args": {
+                                                "mainAxisAlignment": "spaceBetween",
+                                                "children": [
+                                                  {
+                                                    "type": "ink_well",
+                                                    "args": {
+                                                      "onTap": "${set_value('viewType', 'register')}",
+                                                      "child": {
+                                                        "type": "container",
+                                                        "args": {
+                                                          "padding": [
+                                                            25,
+                                                            10
+                                                          ],
+                                                          "alignment": "center",
+                                                          "decoration": {
+                                                            "color": "#FF139DB7",
+                                                            "borderRadius": 18
+                                                          },
+                                                          "child": {
+                                                            "type": "text",
+                                                            "args": {
+                                                              "text": "Close",
+                                                              "style": {
+                                                                "color": "#FFFFFF",
+                                                                "fontSize": 16,
+                                                                "fontWeight": "bold"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "ink_well",
+                                                    "args": {
+                                                      "child": {
+                                                        "type": "container",
+                                                        "args": {
+                                                          "padding": [
+                                                            20,
+                                                            10
+                                                          ],
+                                                          "alignment": "center",
+                                                          "decoration": {
+                                                            "color": "#FF139DB7",
+                                                            "borderRadius": 18
+                                                          },
+                                                          "child": {
+                                                            "type": "text",
+                                                            "args": {
+                                                              "text": "Validate OTP",
+                                                              "style": {
+                                                                "color": "#FFFFFF",
+                                                                "fontSize": 16,
+                                                                "fontWeight": "bold"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "conditional",
+                                    "args": {
+                                      "conditional": {
+                                        "values": {
+                                          "viewType": "verifyPin"
+                                        }
+                                      },
+                                      "onTrue": {
+                                        "type": "column",
+                                        "args": {
+                                          "children": [
+                                            {
+                                              "type": "opacity",
+                                              "args": {
+                                                "opacity": 0.6,
+                                                "child": {
+                                                  "type": "text",
+                                                  "args": {
+                                                    "text": "Hi, Shriram",
+                                                    "style": {
+                                                      "fontSize": 17,
+                                                      "color": "#000000",
+                                                      "fontWeight": "w800"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 20
+                                              }
+                                            },
+                                            {
+                                              "type": "m_pin_filed",
+                                              "args": {
+                                                "length": 4
+                                              }
+                                            },
+                                            {
+                                              "type": "align",
+                                              "args": {
+                                                "alignment": "topLeft",
+                                                "child": {
+                                                  "type": "text_button",
+                                                  "args": {
+                                                    "onPressed": "${set_value('viewType', 'forgetPin')}",
+                                                    "child": {
+                                                      "type": "text",
+                                                      "args": {
+                                                        "text": "Forget Pin?",
+                                                        "style": {
+                                                          "color": "#FFFFFF",
+                                                          "fontSize": 16,
+                                                          "fontWeight": "w800"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "align",
+                                              "args": {
+                                                "alignment": "topRight",
+                                                "child": {
+                                                  "type": "text_button",
+                                                  "args": {
+                                                    "onPressed": "${set_value('viewType', 'register')}",
+                                                    "child": {
+                                                      "type": "text",
+                                                      "args": {
+                                                        "text": "Login using another UserId",
+                                                        "style": {
+                                                          "fontSize": 16,
+                                                          "color": "#303335",
+                                                          "fontWeight": "w800"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "align",
+                                              "args": {
+                                                "alignment": "topRight",
+                                                "child": {
+                                                  "type": "text_button",
+                                                  "args": {
+                                                    "onPressed": "${set_value('viewType', 'authPassword')}",
+                                                    "child": {
+                                                      "type": "text",
+                                                      "args": {
+                                                        "text": "Login using Password",
+                                                        "style": {
+                                                          "color": "#303335",
+                                                          "fontSize": 16,
+                                                          "fontWeight": "w800"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "conditional",
+                                    "args": {
+                                      "conditional": {
+                                        "values": {
+                                          "viewType": "authPassword"
+                                        }
+                                      },
+                                      "onTrue": {
+                                        "type": "column",
+                                        "args": {
+                                          "children": [
+                                            {
+                                              "type": "opacity",
+                                              "args": {
+                                                "opacity": 0.6,
+                                                "child": {
+                                                  "type": "text",
+                                                  "args": {
+                                                    "text": "Hi, Shriram",
+                                                    "style": {
+                                                      "fontSize": 17,
+                                                      "color": "#000000",
+                                                      "fontWeight": "w800"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 20
+                                              }
+                                            },
+                                            {
+                                              "type": "row",
+                                              "args": {
+                                                "children": [
+                                                  {
+                                                    "type": "expanded",
+                                                    "args": {
+                                                      "child": {
+                                                        "type": "text_form_field",
+                                                        "id": "user_password",
+                                                        "args": {
+                                                          "keyboardType": "text",
+                                                          "decoration": {
+                                                            "hintText": "Password",
+                                                            "fillColor": "#45b39d",
+                                                            "filled": true,
+                                                            "hintStyle": {
+                                                              "fontSize": 16,
+                                                              "fontWeight": "w600",
+                                                              "letterSpacing": 1.0
+                                                            },
+                                                            "border": {
+                                                              "type": "outline",
+                                                              "borderRadius": 3.0
+                                                            }
+                                                          },
+                                                          "validators": [
+                                                            {
+                                                              "type": "required"
+                                                            }
+                                                          ]
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "sized_box",
+                                                    "args": {
+                                                      "width": 15
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "sized_box",
+                                                    "args": {
+                                                      "height": "50",
+                                                      "width": "50",
+                                                      "child": {
+                                                        "type": "asset_image",
+                                                        "args": {
+                                                          "fit": "fitWidth",
+                                                          "name": "assets/images/loginarrow.png",
+                                                          "width": "240"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 15
+                                              }
+                                            },
+                                            {
+                                              "type": "asset_image",
+                                              "args": {
+                                                "name": "assets/images/thumb.png",
+                                                "width": 64
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 15
+                                              }
+                                            },
+                                            {
+                                              "type": "text",
+                                              "args": {
+                                                "text": "OR LOGIN USING FINGERPRINT",
+                                                "style": {
+                                                  "color": "#303335",
+                                                  "fontSize": 16,
+                                                  "fontWeight": "w700"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "row",
+                                              "args": {
+                                                "mainAxisAlignment": "spaceBetween",
+                                                "children": [
+                                                  {
+                                                    "type": "text_button",
+                                                    "args": {
+                                                      "onPressed": "${set_value('viewType', 'forgetPin')}",
+                                                      "child": {
+                                                        "type": "text",
+                                                        "args": {
+                                                          "text": "Forget Password?",
+                                                          "style": {
+                                                            "color": "#FFFFFF",
+                                                            "fontSize": 16,
+                                                            "fontWeight": "w700"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "text_button",
+                                                    "args": {
+                                                      "child": {
+                                                        "type": "text",
+                                                        "args": {
+                                                          "text": "Set Quick PIN",
+                                                          "style": {
+                                                            "color": "#FFFFFF",
+                                                            "fontSize": 16,
+                                                            "fontWeight": "w700",
+                                                            "decoration": "underline"
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "text_button",
+                                              "args": {
+                                                "onPressed": "${set_value('viewType', 'register')}",
+                                                "child": {
+                                                  "type": "align",
+                                                  "args": {
+                                                    "alignment": "topRight",
+                                                    "child": {
+                                                      "type": "text",
+                                                      "args": {
+                                                        "text": "Login using another UserId",
+                                                        "style": {
+                                                          "color": "#303335",
+                                                          "fontSize": 16,
+                                                          "fontWeight": "w700"
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "type": "conditional",
+                                    "args": {
+                                      "conditional": {
+                                        "values": {
+                                          "viewType": "forgetPin"
+                                        }
+                                      },
+                                      "onTrue": {
+                                        "type": "column",
+                                        "args": {
+                                          "children": [
+                                            {
+                                              "type": "opacity",
+                                              "args": {
+                                                "opacity": 0.6,
+                                                "child": {
+                                                  "type": "text",
+                                                  "args": {
+                                                    "text": "Hi, Shriram",
+                                                    "style": {
+                                                      "fontSize": 17,
+                                                      "color": "#000000",
+                                                      "fontWeight": "w800"
+                                                    }
+                                                  }
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 20
+                                              }
+                                            },
+                                            {
+                                              "type": "text_form_field",
+                                              "id": "mobile_number",
+                                              "args": {
+                                                "keyboardType": "number",
+                                                "decoration": {
+                                                  "hintText": "Mobile Number",
+                                                  "fillColor": "#45b39d",
+                                                  "filled": true,
+                                                  "hintStyle": {
+                                                    "fontSize": 16,
+                                                    "fontWeight": "w600",
+                                                    "letterSpacing": 1.0
+                                                  },
+                                                  "border": {
+                                                    "type": "outline",
+                                                    "borderRadius": 3.0
+                                                  }
+                                                },
+                                                "validators": [
+                                                  {
+                                                    "type": "required"
+                                                  },
+                                                  {
+                                                    "type": "number"
+                                                  },
+                                                  {
+                                                    "length": 10,
+                                                    "type": "max_length"
+                                                  },
+                                                  {
+                                                    "length": 10,
+                                                    "type": "min_length"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 30
+                                              }
+                                            },
+                                            {
+                                              "type": "text_form_field",
+                                              "id": "otp_number",
+                                              "args": {
+                                                "keyboardType": "number",
+                                                "decoration": {
+                                                  "hintText": "OTP",
+                                                  "fillColor": "#45b39d",
+                                                  "filled": true,
+                                                  "hintStyle": {
+                                                    "fontSize": 16,
+                                                    "fontWeight": "w600",
+                                                    "letterSpacing": 1.0
+                                                  },
+                                                  "border": {
+                                                    "type": "outline",
+                                                    "borderRadius": 3.0
+                                                  }
+                                                },
+                                                "validators": [
+                                                  {
+                                                    "type": "required"
+                                                  },
+                                                  {
+                                                    "type": "number"
+                                                  },
+                                                  {
+                                                    "length": 4,
+                                                    "type": "max_length"
+                                                  },
+                                                  {
+                                                    "length": 6,
+                                                    "type": "min_length"
+                                                  }
+                                                ]
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 30
+                                              }
+                                            },
+                                            {
+                                              "type": "sized_box",
+                                              "args": {
+                                                "height": 30
+                                              }
+                                            },
+                                            {
+                                              "type": "row",
+                                              "args": {
+                                                "mainAxisAlignment": "spaceBetween",
+                                                "children": [
+                                                  {
+                                                    "type": "ink_well",
+                                                    "args": {
+                                                      "onTap": "${set_value('viewType', 'register')}",
+                                                      "child": {
+                                                        "type": "container",
+                                                        "args": {
+                                                          "padding": [
+                                                            25,
+                                                            10
+                                                          ],
+                                                          "alignment": "center",
+                                                          "decoration": {
+                                                            "color": "#FF139DB7",
+                                                            "borderRadius": 18
+                                                          },
+                                                          "child": {
+                                                            "type": "text",
+                                                            "args": {
+                                                              "text": "Close",
+                                                              "style": {
+                                                                "color": "#FFFFFF",
+                                                                "fontSize": 16,
+                                                                "fontWeight": "bold"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  },
+                                                  {
+                                                    "type": "ink_well",
+                                                    "args": {
+                                                      "child": {
+                                                        "type": "container",
+                                                        "args": {
+                                                          "padding": [
+                                                            20,
+                                                            10
+                                                          ],
+                                                          "alignment": "center",
+                                                          "decoration": {
+                                                            "color": "#FF139DB7",
+                                                            "borderRadius": 18
+                                                          },
+                                                          "child": {
+                                                            "type": "text",
+                                                            "args": {
+                                                              "text": "Validate OTP",
+                                                              "style": {
+                                                                "color": "#FFFFFF",
+                                                                "fontSize": 16,
+                                                                "fontWeight": "bold"
+                                                              }
+                                                            }
+                                                          }
+                                                        }
+                                                      }
+                                                    }
+                                                  }
+                                                ]
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "positioned",
+            "args": {
+              "top": 230,
+              "child": {
+                "type": "asset_image",
+                "args": {
+                  "name": "assets/images/user.png",
+                  "height": 110,
+                  "width": 110
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
